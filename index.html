@@ -1053,7 +1053,7 @@
                         <i class="fab fa-discord"></i>
                     </a>
                 </div>
-                <p class="copyright">© 2023 Dave. All rights reserved.</p>
+                <p class="copyright">© 2025 Dave. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1176,10 +1176,6 @@ window.addEventListener('load', () => {
         // Add hover effect to project cards
         document.querySelectorAll('.project-card').forEach(card => {
             card.addEventListener('mousemove', (e) => {
-                const x = e.pageX - card.getBoundingClientRect().left;
-                const y = e.pageY - card.getBoundingClientRect().top;
-                
-                const centerX = card.offsetWidth / 2;
                 const centerY = card.offsetHeight / 2;
                 
                 const angleX = (y - centerY) / 20;
@@ -1199,6 +1195,10 @@ window.addEventListener('load', () => {
             if (skillsSection) {
                 const skillsPosition = skillsSection.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
+                const x = e.pageX - card.getBoundingClientRect().left;
+                const y = e.pageY - card.getBoundingClientRect().top;
+                
+                const centerX = card.offsetWidth / 2;
                 
                 if (skillsPosition < windowHeight - 100) {
                     animateSkillBars();
